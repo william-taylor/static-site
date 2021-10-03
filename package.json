@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel site/index.html",
+    "start": "parcel site/index.html",
     "build": "parcel build site/index.html"
   },
   "repository": {
