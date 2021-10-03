@@ -8,17 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
-
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/skeleton.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/images/icon.png">
 
     <script src="https://use.fontawesome.com/10bcb79d91.js"></script>
+
+    <style>
+        video {
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <video class="video" autoplay muted playsinline loop>
+        <video id='video' class="video" autoplay muted playsinline loop>
             <source src="assets/video/timelapse.mp4" type="video/mp4">
         </video>
         <div class="container">
@@ -33,8 +38,8 @@
                                 Software Engineer
                             </h4>
                             <p class="summary">
-                                Front office developer working at a tier one investment bank on their repo trading
-                                platform working primarily with Java, Python and JavaScript.
+                                Front office developer working at Morgan Stanleyn their repo trading
+                                platform primarily with Java, C++, Python and Typescript.
                             </p>
                             <p class="location">
                                 <i class="fa fa-map-marker pad-right" aria-hidden="true"></i> London, England
@@ -59,5 +64,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // NOTE: Hack for video auto pausing on mobile devices
+        const video = document.getElementById('video');
+        setInterval(function() {
+            if (!video.playing) {
+                video.play();
+            }
+        }, 100)
+    </script>
 </body>
 </html>
