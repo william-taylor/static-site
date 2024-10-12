@@ -21,9 +21,9 @@ html, body {
     color: #f1f1f1;
     position: fixed;
     transform: translate(-50%, -50%);
-    top: 48%;
+    top: 50%;
     left: 50%;
-    width: 100%;
+    width: 85%;
     -webkit-animation: fadein 1s; 
        -moz-animation: fadein 1s; 
         -ms-animation: fadein 1s; 
@@ -32,13 +32,13 @@ html, body {
 }
 
 .location {
-    margin-bottom: 0.1rem !important;
     font-weight: 300;
+    margin-bottom: 1.0rem;
 }
 
 .summary {
-    max-width: 450px !important;
-    margin: 2rem auto;
+    max-width: 400px;
+    margin: 0px auto 20px auto;
 }
 
 .title {
@@ -92,6 +92,10 @@ html, body {
 
 .links li:hover {
     color: #fff;
+}
+
+video {
+    pointer-events: none;
 }
 
 @keyframes fadein {
